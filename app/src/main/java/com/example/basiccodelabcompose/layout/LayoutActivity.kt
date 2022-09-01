@@ -10,6 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.basiccodelabcompose.R
 import com.example.basiccodelabcompose.layout.ui.element.AlignYourBodyElement
+import com.example.basiccodelabcompose.layout.ui.element.AlignYourBodyRow
 import com.example.basiccodelabcompose.layout.ui.element.FavoriteCollectionCard
 import com.example.basiccodelabcompose.layout.ui.element.SearchBar
 import com.example.basiccodelabcompose.layout.ui.theme.MyLayoutTheme
@@ -43,6 +44,14 @@ fun AlignYourBodyElementPreview() {
             R.string.ab1_inversions,
             Modifier.padding(8.dp)
         )
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF0EAE2)
+@Composable
+fun AlignYourBodyRowPreview() {
+    MyLayoutTheme {
+        AlignYourBodyRow(Modifier.padding(vertical = 8.dp))
     }
 }
 

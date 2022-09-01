@@ -1,16 +1,16 @@
-package com.example.basiccodelabcompose.layout.ui.element
+package com.example.basiccodelabcompose.layout.data
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.example.basiccodelabcompose.R
 
-class LayoutDrawable {
+object LayoutDrawable {
     data class DrawableStringPair(
         @DrawableRes val drawable: Int,
         @StringRes val text: Int
     )
 
-    private val alignYourBodyData = listOf(
+    val alignYourBodyData = listOf(
         R.drawable.ab1_inversions to R.string.ab1_inversions,
         R.drawable.ab2_quick_yoga to R.string.ab2_quick_yoga,
         R.drawable.ab3_stretching to R.string.ab3_stretching,
@@ -19,7 +19,7 @@ class LayoutDrawable {
         R.drawable.ab6_pre_natal_yoga to R.string.ab6_pre_natal_yoga
     ).map { DrawableStringPair(it.first, it.second) }
 
-    private val favoriteCollectionsData = listOf(
+    val favoriteCollectionsData = listOf(
         R.drawable.fc1_short_mantras to R.string.fc1_short_mantras,
         R.drawable.fc2_nature_meditations to R.string.fc2_nature_meditations,
         R.drawable.fc3_stress_and_anxiety to R.string.fc3_stress_and_anxiety,
