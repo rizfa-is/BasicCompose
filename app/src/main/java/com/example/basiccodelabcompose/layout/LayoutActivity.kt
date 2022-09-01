@@ -92,6 +92,14 @@ fun HomeScreenPreview() {
     }
 }
 
+@Preview(showBackground = true, backgroundColor = 0xFFF0EAE2)
+@Composable
+fun MyLayoutBottomNavigationPreview() {
+    MyLayoutTheme {
+        MyLayoutBottomNavigation(Modifier.padding(top = 16.dp))
+    }
+}
+
 //@Preview(widthDp = 360, heightDp = 640)
 //@Composable
 //fun MyLayoutAppPreview() {
