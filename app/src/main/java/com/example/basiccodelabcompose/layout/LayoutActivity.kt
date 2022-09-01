@@ -9,10 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.basiccodelabcompose.R
-import com.example.basiccodelabcompose.layout.ui.element.AlignYourBodyElement
-import com.example.basiccodelabcompose.layout.ui.element.AlignYourBodyRow
-import com.example.basiccodelabcompose.layout.ui.element.FavoriteCollectionCard
-import com.example.basiccodelabcompose.layout.ui.element.SearchBar
+import com.example.basiccodelabcompose.layout.ui.element.*
 import com.example.basiccodelabcompose.layout.ui.theme.MyLayoutTheme
 
 class LayoutActivity: ComponentActivity() {
@@ -64,6 +61,14 @@ fun FavoriteCollectionCardPreview() {
             R.string.fc2_nature_meditations,
             Modifier.padding(8.dp)
         )
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF0EAE2)
+@Composable
+fun FavoriteCollectionGridPreview() {
+    MyLayoutTheme {
+        FavoriteCollectionGrid(Modifier.padding(vertical = 8.dp))
     }
 }
 
