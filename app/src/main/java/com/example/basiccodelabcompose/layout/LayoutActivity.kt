@@ -24,6 +24,7 @@ private fun MyLayoutApp() {
 
 }
 
+/*
 @Preview(showBackground = true, backgroundColor = 0xFFF0EAE2)
 @Composable
 fun SearchBarPreview() {
@@ -69,6 +70,25 @@ fun FavoriteCollectionCardPreview() {
 fun FavoriteCollectionGridPreview() {
     MyLayoutTheme {
         FavoriteCollectionGrid(Modifier.padding(vertical = 8.dp))
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF0EAE2)
+@Composable
+fun HomeSectionPreview() {
+    MyLayoutTheme {
+        HomeSection(title = R.string.align_your_body) {
+            AlignYourBodyRow()
+        }
+    }
+}
+*/
+
+@Preview(showBackground = true, backgroundColor = 0xFFF0EAE2, heightDp = 180)
+@Composable
+fun HomeScreenPreview() {
+    MyLayoutTheme {
+        HomeScreen()
     }
 }
 
