@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -21,7 +22,13 @@ class LayoutActivity: ComponentActivity() {
 
 @Composable
 private fun MyLayoutApp() {
-
+    MyLayoutTheme {
+        Scaffold(
+            bottomBar = { MyLayoutBottomNavigation() }
+        ) { paddingValues ->
+            HomeScreen(Modifier.padding(paddingValues))
+        }
+    }
 }
 
 /*
@@ -82,7 +89,6 @@ fun HomeSectionPreview() {
         }
     }
 }
-*/
 
 @Preview(showBackground = true, backgroundColor = 0xFFF0EAE2, heightDp = 180)
 @Composable
@@ -99,9 +105,10 @@ fun MyLayoutBottomNavigationPreview() {
         MyLayoutBottomNavigation(Modifier.padding(top = 16.dp))
     }
 }
+*/
 
-//@Preview(widthDp = 360, heightDp = 640)
-//@Composable
-//fun MyLayoutAppPreview() {
-//    MyLayoutApp()
-//}
+@Preview(widthDp = 360, heightDp = 640)
+@Composable
+fun MyLayoutAppPreview() {
+    MyLayoutApp()
+}
