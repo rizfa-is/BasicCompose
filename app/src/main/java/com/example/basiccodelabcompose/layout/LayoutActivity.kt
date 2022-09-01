@@ -11,7 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.basiccodelabcompose.R
 import com.example.basiccodelabcompose.layout.ui.element.*
-import com.example.basiccodelabcompose.layout.ui.theme.MyLayoutTheme
+import com.example.basiccodelabcompose.ui.theme.MyLayoutTheme
 
 class LayoutActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class LayoutActivity: ComponentActivity() {
 }
 
 @Composable
-private fun MyLayoutApp() {
+fun MyLayoutApp() {
     MyLayoutTheme {
         Scaffold(
             bottomBar = { MyLayoutBottomNavigation() }
@@ -31,7 +31,7 @@ private fun MyLayoutApp() {
     }
 }
 
-/*
+
 @Preview(showBackground = true, backgroundColor = 0xFFF0EAE2)
 @Composable
 fun SearchBarPreview() {
@@ -105,7 +105,7 @@ fun MyLayoutBottomNavigationPreview() {
         MyLayoutBottomNavigation(Modifier.padding(top = 16.dp))
     }
 }
-*/
+
 
 @Preview(widthDp = 360, heightDp = 640)
 @Composable

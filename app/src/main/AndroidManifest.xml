@@ -14,7 +14,7 @@
         android:theme="@style/Theme.BasicCodelabCompose"
         tools:targetApi="31">
         <activity
-            android:name=".layout.LayoutActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.BasicCodelabCompose">
@@ -24,7 +24,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".basic.MainActivity"/>
+        <activity
+            android:name=".layout.LayoutActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BasicCodelabCompose"/>
+        <activity
+            android:name=".basic.BasicActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BasicCodelabCompose"/>
     </application>
 
 </manifest>

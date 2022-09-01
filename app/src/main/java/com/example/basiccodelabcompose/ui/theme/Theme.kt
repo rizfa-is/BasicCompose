@@ -34,6 +34,44 @@ private val LightColorPalette = lightColors(
     */
 )
 
+private val MyLayoutLightColorPalette = lightColors(
+    primary = gray900,
+    secondary = rust600,
+    background = taupe100,
+    surface = Color.White.copy(alpha = .85f),
+    onPrimary = Color.White,
+    onSecondary = Color.White,
+    onBackground = taupe800,
+    onSurface = gray900.copy(alpha = 0.8f)
+)
+
+private val MyLayoutDarkColorPalette = darkColors(
+    primary = Color.White,
+    secondary = rust300,
+    background = gray900,
+    surface = Color.White.copy(alpha = 0.15f),
+    onPrimary = gray900,
+    onSecondary = gray900,
+    onBackground = taupe100,
+    onSurface = Color.White.copy(alpha = .8f)
+)
+
+@Composable
+fun MyLayoutTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+    val colors = if (darkTheme) {
+        MyLayoutDarkColorPalette
+    } else {
+        MyLayoutLightColorPalette
+    }
+
+    MaterialTheme(
+        colors = colors,
+        typography = MyLayoutTypography,
+        shapes = MyLayoutShapes,
+        content = content
+    )
+}
+
 @Composable
 fun BasicCodelabComposeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

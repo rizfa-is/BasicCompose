@@ -22,12 +22,12 @@ import androidx.compose.ui.unit.dp
 import com.example.basiccodelabcompose.R
 import com.example.basiccodelabcompose.ui.theme.BasicCodelabComposeTheme
 
-class MainActivity : ComponentActivity() {
+class BasicActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             BasicCodelabComposeTheme {
-                MyApp()
+                MyBasicApp()
             }
         }
     }
