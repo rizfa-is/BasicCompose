@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">BasicCodelabCompose</string>
+
+    <!-- Basic Codelab -->
+    <string name="title_activity_basic">BasicActivity</string>
     <string name="show_less">Show less</string>
     <string name="show_more">Show more</string>
 
     <!-- Layout Codelab -->
+    <string name="title_activity_layout">LayoutActivity</string>
     <string name="favorite_collections">Favorite Collections</string>
     <string name="align_your_body">Align your body</string>
     <string name="ab1_inversions">Inversions</string>
@@ -22,4 +26,7 @@
     <string name="bottom_navigation_home">HOME</string>
     <string name="bottom_navigation_profile">PROFILE</string>
     <string name="placeholder_search">Search</string>
+
+    <!-- State Codelab -->
+    <string name="title_activity_state">StateActivity</string>
 </resources>

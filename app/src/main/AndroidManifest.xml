@@ -25,13 +25,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".state.StateActivity"
+            android:exported="false"
+            android:label="@string/title_activity_state"
+            android:theme="@style/Theme.BasicCodelabCompose" />
+        <activity
             android:name=".layout.LayoutActivity"
             android:exported="true"
-            android:theme="@style/Theme.BasicCodelabCompose"/>
+            android:label="@string/title_activity_layout"
+            android:theme="@style/Theme.BasicCodelabCompose" />
         <activity
             android:name=".basic.BasicActivity"
             android:exported="true"
-            android:theme="@style/Theme.BasicCodelabCompose"/>
+            android:label="@string/title_activity_basic"
+            android:theme="@style/Theme.BasicCodelabCompose" />
     </application>
 
 </manifest>

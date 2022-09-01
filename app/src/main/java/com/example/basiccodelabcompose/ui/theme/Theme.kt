@@ -23,16 +23,26 @@ private val LightColorPalette = lightColors(
     surface = Blue,
     onSurface = Color.White,
     onPrimary = Navy
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
 )
+
+@Composable
+fun BasicCodelabComposeTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
+    val colors = if (darkTheme) {
+        DarkColorPalette
+    } else {
+        LightColorPalette
+    }
+
+    MaterialTheme(
+        colors = colors,
+        typography = Typography,
+        shapes = Shapes,
+        content = content
+    )
+}
 
 private val MyLayoutLightColorPalette = lightColors(
     primary = gray900,
@@ -57,7 +67,7 @@ private val MyLayoutDarkColorPalette = darkColors(
 )
 
 @Composable
-fun MyLayoutTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+fun MyLayoutTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
         MyLayoutDarkColorPalette
     } else {
@@ -72,15 +82,27 @@ fun MyLayoutTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composab
     )
 }
 
+private val MyStateDarkColorPalette = darkColors(
+    primary = Purple200,
+    primaryVariant = Purple700,
+    secondary = Teal200
+)
+
+private val MyStateLightColorPalette = lightColors(
+    primary = Purple500,
+    primaryVariant = Purple700,
+    secondary = Teal200
+)
+
 @Composable
-fun BasicCodelabComposeTheme(
+fun MyStateTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
-        DarkColorPalette
+        MyStateDarkColorPalette
     } else {
-        LightColorPalette
+        MyStateLightColorPalette
     }
 
     MaterialTheme(
