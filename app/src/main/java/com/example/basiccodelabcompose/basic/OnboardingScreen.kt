@@ -37,7 +37,7 @@ fun OnboardingScreen(onContinueClicked: () -> Unit) {
 }
 
 @Composable
-fun MyApp() {
+fun MyBasicApp() {
     var shouldShowOnboarding by rememberSaveable {
         mutableStateOf(true)
     }
