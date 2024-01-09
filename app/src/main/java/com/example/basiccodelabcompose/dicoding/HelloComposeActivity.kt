@@ -1,5 +1,6 @@
 package com.example.basiccodelabcompose.dicoding
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -45,12 +46,19 @@ fun HelloJetpackComposeApp() {
     }
 }
 
-
-@Preview(showBackground = true, device = Devices.PIXEL_4)
+@Preview(showBackground = true, device = Devices.PIXEL_4, uiMode = UI_MODE_NIGHT_YES)
 @Composable
-fun GreetingPreview() {
+fun HelloJetpackComposeAppPreview() {
     HelloComposeTheme {
         HelloJetpackComposeApp()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    HelloComposeTheme {
+        GreetingList(sampleName)
     }
 }
 
